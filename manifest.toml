@@ -14,7 +14,7 @@ maintainers = ["eric_G"]
 [upstream]
 license = "AGPL-3.0"
 website = "https://sftpgo.com/"
-admindoc = "https://yunohost.org/packaging_apps"
+admindoc = "https://docs.sftpgo.com/2.6/"
 code = "https://github.com/drakkan/sftpgo"
 
 [integration]
@@ -42,9 +42,12 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://github.com/drakkan/sftpgo/archive/refs/tags/v2.6.2.tar.gz"
-    sha256 = "34b317d2095377ae2850e9be5920f83e479acf1e33bbf0b97097b70640b08612"
-
+    url = "https://github.com/drakkan/sftpgo/releases/download/v2.6.2/sftpgo_2.6.2-1_amd64.deb"
+    sha256 = "81c135699213e72be9cc6925ce2fcb427a2259cc1504a38a4ec156525c337dca"
+    in_subdir = false
+    extract = false
+    rename = "sftpgo.deb"
+    
     # autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]

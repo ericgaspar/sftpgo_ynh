@@ -12,26 +12,18 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression "Setting up source files..."
 
-ynh_setup_source --dest_dir="$install_dir/build"
+tempdir="$(mktemp -d)"
 
-#=================================================
-# BUILD APP
-#=================================================
-ynh_script_progression "Building $app..."
+ynh_setup_source --dest_dir="$install_dir"
 
-ynh_go_install
+# extract the binary from the deb file
+dpkg-deb -R "$install_dir/sftpgo.deb" "$tempdir"
 
-pushd $install_dir/build/
-	ynh_hide_warnings ynh_exec_as_app CGO_ENABLED=0 go build -o $install_dir/
-popd
+mv "$tempdir/usr/bin/sftpgo" "$install_dir"
 
-ynh_go_remove
-ynh_safe_rm "$install_dir/build/"
-ynh_safe_rm "$install_dir/.cache/"
-ynh_safe_rm "$install_dir/go/"
-ynh_safe_rm "$install_dir/.go-version"
+ynh_safe_rm "$tempdir"
 
-chmod +x $install_dir/sftpgo
+chmod +x "$install_dir/sftpgo"
 
 #=================================================
 # APP INITIAL CONFIGURATION
