@@ -14,7 +14,7 @@ maintainers = ["eric_G"]
 [upstream]
 license = "AGPL-3.0"
 website = "https://sftpgo.com/"
-admindoc = "https://yunohost.org/packaging_apps"
+admindoc = "https://docs.sftpgo.com/2.6/"
 code = "https://github.com/drakkan/sftpgo"
 
 [integration]
