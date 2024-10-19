@@ -12,9 +12,18 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression "Setting up source files..."
 
+tempdir="$(mktemp -d)"
+
 ynh_setup_source --dest_dir="$install_dir"
 
-chmod +x $install_dir/sftpgo
+# extract the binary from the deb file
+dpkg-deb -R "$install_dir/sftpgo.deb" "$tempdir"
+
+mv "$tempdir/usr/bin/sftpgo" "$install_dir"
+
+ynh_safe_rm "$tempdir"
+
+chmod +x "$install_dir/sftpgo"
 
 #=================================================
 # APP INITIAL CONFIGURATION
