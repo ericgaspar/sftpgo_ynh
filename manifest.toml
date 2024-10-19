@@ -42,8 +42,8 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://github.com/drakkan/sftpgo/releases/download/v2.6.2/sftpgo_v2.6.2_linux_x86_64.tar.xz"
-    sha256 = "ff5be49258bb5c0ea0fd87d14e79e77ec68870da19a0e2577ae77b0287fd250e"
+    url = "https://github.com/drakkan/sftpgo/archive/refs/tags/v2.6.2.tar.gz"
+    sha256 = "34b317d2095377ae2850e9be5920f83e479acf1e33bbf0b97097b70640b08612"
 
     # autoupdate.strategy = "latest_github_tag"
 
