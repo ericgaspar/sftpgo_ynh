@@ -197,12 +197,12 @@
     }
   },
   "data_provider": {
-    "driver": "sqlite",
-    "name": "sftpgo.db",
-    "host": "",
-    "port": 0,
-    "username": "",
-    "password": "",
+    "driver": "postgresql",
+    "name": "__DB_NAME__",
+    "host": "localgost",
+    "port": 5432,
+    "username": "__DB_USER__",
+    "password": "__DB_PWD__",
     "sslmode": 0,
     "disable_sni": false,
     "target_session_attrs": "",
