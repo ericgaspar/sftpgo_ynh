@@ -18,10 +18,11 @@ admindoc = "https://yunohost.org/packaging_apps"
 code = "https://github.com/drakkan/sftpgo"
 
 [integration]
-yunohost = ">= 11.2.30"
+yunohost = ">= 12.0.9"
 helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
+
 ldap = false
 sso = false
 
@@ -42,7 +43,7 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://github.com/drakkan/sftpgo/releases/download/v2.6.2/sftpgo_v2.6.2_linux_x86_64.tar.xz"
+    url = "https://github.com/drakkan/sftpgo/releases/download/v2.6.2/sftpgo_v2.6.6_linux_x86_64.tar.xz"
     sha256 = "ff5be49258bb5c0ea0fd87d14e79e77ec68870da19a0e2577ae77b0287fd250e"
 
     # autoupdate.strategy = "latest_github_tag"
