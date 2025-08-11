@@ -5,9 +5,9 @@ packaging_format = 2
 id = "sftpgo"
 name = "sftpgo"
 description.en = "Fully featured and highly configurable SFTP server"
-description.fr = "Expliquez en *quelques* (10~15) mots l'utilité de l'app ou ce qu'elle fait (l'objectif est de donner une idée grossière pour des utilisateurs qui naviguent dans un catalogue de 100+ apps)"
+description.fr = "Serveur SFTP complet et hautement configurable"
 
-version = "2.6.2~ynh1"
+version = "2.6.6~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -43,8 +43,8 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://github.com/drakkan/sftpgo/releases/download/v2.6.2/sftpgo_v2.6.6_linux_x86_64.tar.xz"
-    sha256 = "ff5be49258bb5c0ea0fd87d14e79e77ec68870da19a0e2577ae77b0287fd250e"
+    url = "https://github.com/drakkan/sftpgo/releases/download/v2.6.6/sftpgo_v2.6.6_linux_x86_64.tar.xz"
+    sha256 = "1fd5411d973efddc4058b725141c08385e2556ed4239131a38d535bf9a6c82ff"
 
     # autoupdate.strategy = "latest_github_tag"
 
