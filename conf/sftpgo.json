@@ -199,7 +199,7 @@
   "data_provider": {
     "driver": "postgresql",
     "name": "__DB_NAME__",
-    "host": "localgost",
+    "host": "localhost",
     "port": 5432,
     "username": "__DB_USER__",
     "password": "__DB_PWD__",
